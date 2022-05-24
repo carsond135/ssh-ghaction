@@ -6,6 +6,10 @@ on:
         description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
         required: false
         default: true
+      shell_enabled:
+        description: 'Enable Shell Access'
+        required: false
+        default: true
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
