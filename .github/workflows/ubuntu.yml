@@ -1,0 +1,13 @@
+name: Ubuntu
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latestt
+    steps:
+      - uses: tmshkr/ngrok-ssh@latest
+        with:
+          NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
+          NGROK_CONFIG_FILE: "ngrok.yml"
+      - run: npm start
