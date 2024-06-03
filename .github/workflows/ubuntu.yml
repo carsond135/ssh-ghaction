@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: tmshkr/ngrok-ssh@latest
         with:
+          SSH_CLIENT_PUBLIC_KEY: ${{ secrets.SSH_CLIENT_PUBLIC_KEY }}
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
           NGROK_CONFIG_FILE: "ngrok.yml"
       - run: npm start
